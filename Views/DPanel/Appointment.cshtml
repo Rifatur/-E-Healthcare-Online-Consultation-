@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Hoyna.Models.Appointment>
+@{
+    ViewBag.Title = "Appointment";
+    Layout = "~/Views/Layout/_LayoutDpanel.cshtml";
+}
+
+    <div class="DisplayEduList">
+
+        @*<div class="_BookingList ">
+        <div class="_ListHeader">
+            <h3>Education List</h3>
+        </div>
+        <table class="bookingItems">
+            <tr>
+                <th>ID</th>
+                <th>Room Title</th>
+                <th>Room Price</th>
+                <th>Room Type</th>
+                <th>Action</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.RoomId</td>
+                    <td>@item.RoomTitle</td>
+                    <td>@item.RoomPrice</td>
+                    <td>@item.typeName</td>
+                    <td>
+                        @Html.ActionLink("View", "Details", "Room", new { RoomId = @item.RoomId }, new { })
+                        @Html.ActionLink("Edit", "Edit", "Room", new { RoomId = @item.RoomId }, new { })
+                        @Html.ActionLink("Delete", "Delete", "Room", new { RoomId = @item.RoomId }, new { })
+                    </td>
+                </tr>
+            }
+        </table>*@
+        <table class="table">
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FName)
+                </th>
+                <th>
+                    Deparment Name
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message)
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Department.DName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Message)
+                    </td>
+                    <td>
+                        @Html.ActionLink("View", "Details", "DPanel", new { AId = @item.AId }, new { })
+                        @Html.ActionLink("Edit", "Edit", "DPanel", new { AId = @item.AId }, new { })
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+
+    </div>
+

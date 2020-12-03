@@ -1,0 +1,41 @@
+﻿@model Hoyna.Models.DepartmentModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+
+    
+
+    <table id="customers">
+        <tr>
+            <td>DepartmentId</td>
+            <td>@Model.DepartmentId</td>
+        </tr>
+        <tr>
+            <td>Department Name</td>
+            <td>@Model.DName</td>
+        </tr>
+        <tr>
+            <td>Discription</td>
+            <td>@Model.Discription</td>
+        </tr>
+        <tr>
+            <td>Department Image</td>
+            <td>@Model.DImage</td>
+        </tr>
+        <tr>
+            <td>Created Date</td>
+            <td>@Model.createdDate</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.ActionLink("Back", "index", "Department",  new { })
+            </td>
+        </tr>
+
+    </table>
+
+
+   
+

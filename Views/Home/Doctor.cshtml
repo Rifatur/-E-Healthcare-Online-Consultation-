@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Hoyna.Models.DoctorModel>
+@{
+    ViewBag.Title = "Doctor";
+    Layout = "~/Views/Layout/_LayoutHome.cshtml";
+}
+@if (Model != null)
+{
+    <div class="_Doctor_sec">
+        <div class="_Doctor_wrapper">
+            <div class="_Doctor_title">
+                <h2>MEET OUR SPECIALISTS</h2>
+            </div>
+            @*RIFAT*@
+
+        <div class="_Doctor_Content">
+            @*RIFAT*@
+            @foreach (var item in Model)
+            {
+
+
+                <div class="doctorCard">
+                    <!--/RI//\\FAT\-->
+                    <div class="info_header">
+                        <h2>@item.FName @item.LName</h2>
+                        <p>Surgery Specialist</p>
+                    </div>
+                    <div class="DImage">
+                        <img src="~/Images/team-medium-img3.jpg" alt="">
+                    </div>
+                    <div class="details_info">
+                        <div class="_info">
+                            <div class="_info_text">
+                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolor libero unde adipisci consequuntur accusantium laborum nobis quibusdam distinctio at sit, quo error? Ullam,</p>
+                            </div>
+                            <div class="info_link"></div>
+                            <div class="info_button">
+                                @Html.ActionLink("Read More", "Details", "Doctor", new { DocId = @item.DocId }, new { })
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--/RI//\\FAT\-->
+
+
+
+
+
+
+            }
+
+          
+
+        </div>
+
+        @*RIFAT*@
+
+        </div>
+        @*RIFAT*@
+    </div>
+
+}

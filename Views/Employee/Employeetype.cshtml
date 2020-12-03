@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Employeetype";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+@{
+    <link rel="stylesheet" href="~/Context/css/Employee.css">
+}
+<div class="card-form">
+    <div class="signup">
+        @using (Html.BeginForm("Employeetype", "Employee", FormMethod.Post))
+            {
+
+        <div class="form-title">Add Employee Type</div>
+        <div class="form-body">
+            <div class="row">
+                <input type="text" placeholder="Type Title*" name="eTypeName">
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Submit" />
+            </div>
+
+        </div>
+
+        }
+    </div>
+    <div class="navicationBar">
+        <div class="Addbtn"><a href="~/Employee">Back</a></div>
+    </div>
+</div>
+
+

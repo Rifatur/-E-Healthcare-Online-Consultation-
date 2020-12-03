@@ -1,0 +1,108 @@
+﻿@model  Hoyna.Models.DoctorModel
+@{
+    ViewBag.Title = "ADD";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+<div class="Dept_details">
+    
+
+    @using (Html.BeginForm("Addrecord", "Doctor", FormMethod.Post))
+    {
+        <div class="table_tow">
+            <div class="input_col">
+                <!--div input-->
+                <div class="row1">
+                    <!--Rooww-->
+                    <label for="Name">FirstName <span class="alart">*</span></label>
+                    <input type="text" id="FName" name="FName">
+                </div>
+                <div class="row2">
+                    <label for="Name">LastName <span class="alart">*</span></label>
+                    <input type="text" id="LName" name="LName">
+                </div>
+            </div>
+            <div class="input_col">
+                <!--div input-->
+                <div class="row1">
+                    <label for="Name">Email <span class="alart">*</span></label>
+                    <input type="text" id="Email" name="Email">
+                </div>
+                <div class="row2">
+                    <label for="Name">Password <span class="alart">*</span></label>
+                    <input type="text" id="Password" name="Passward">
+                </div>
+            </div><!--End input col-->
+ 
+            <div class="input_col">
+                <!--div input-->
+                <div class="row1">
+                    <!--Rooww-->
+                    @Html.DropDownListFor(model => model.DepartmentId, ViewBag.DepartmentList as SelectList, "--Select--", new { })
+                </div>
+                <div class="row2">
+                    <!--Rooww-->
+                    <label for="Name">Date Of Birth <span class="alart">*</span></label>
+                    <input type="date" id="DOB" name="DOB">
+                </div>
+            </div><!--End input col-->
+            <div class="input_col">
+                <!--div input-->
+                <div class="row1">
+                    <label for="male">Gender <span class="alart">*</span></label>
+                    <div class="genderbox">
+                        <input type="radio" id="male" name="Gander" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="Gander" value="female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="Gander" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <div class="row2">
+
+                </div>
+            </div><!--End input col-->
+
+            <div class="address-row">
+                <label for="address">Address<span class="alart">*</span></label>
+                <input type="text" id="DocAddress" name="DocAddress">
+            </div><!--Address section-->
+            <div class="input-col-2">
+                <div class="col-row1">
+                    <label for="Country">Country<span class="alart">*</span></label>
+                    <input type="text" id="Country" name="Country">
+                </div>
+                <div class="col-row1">
+                    <label for="City">City<span class="alart">*</span></label>
+                    <input type="text" id="City" name="City">
+                </div>
+                <div class="col-row1">
+                    <label for="thana">State<span class="alart">*</span></label>
+                    <input type="text" id="State" name="State">
+                </div>
+                <div class="col-row1">
+                    <label for="pocode">Postal Code<span class="alart">*</span></label>
+                    <input type="text" id="Post" name="Post">
+                </div>
+            </div><!--Input col-2 end-->
+
+            <div class="input_col">
+                <!--div input-->
+                <div class="row1">
+                    <!--Row-->
+                    <label for="Phone">Phone <span class="alart">*</span></label>
+                    <input type="text" id="PhoneNo" name="PhoneNo">
+                </div>
+                <div class="row2">
+                </div>
+            </div><!--End input col-->
+
+
+        </div><!--Table Row-->
+        <input type="submit" value="Submit" />
+
+    }<!--END FORM-->
+
+</div>
+

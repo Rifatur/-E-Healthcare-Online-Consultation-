@@ -1,0 +1,43 @@
+﻿@model Hoyna.Models.Education
+@{
+    ViewBag.Title = "EEdit";
+    Layout = "~/Views/Layout/_LayoutDpanel.cshtml";
+}
+
+<div class="card-form">
+    <div class="signup">
+        @using (Html.BeginForm("EEdit", "DPanel", FormMethod.Post))
+        {
+
+            <div class="form-title">Add You Education</div>
+            <div class="form-body">
+                <div class="row">
+                    @Html.TextBoxFor(model => model.DegreeName)
+                </div>
+                <div class="row">
+                    @Html.TextBoxFor(model => model.StartDate)
+                   
+                    @Html.TextBoxFor(model => model.EndDate)
+                </div>
+                <div class="row">
+                   
+                    @Html.TextBoxFor(model => model.University)
+                </div>
+                <div class="row">
+                    
+                    @Html.TextBoxFor(model => model.Country)
+                   
+                    @Html.TextBoxFor(model => model.City)
+                </div>
+
+                <div class="row">
+                    <input type="submit" value="Submit" />
+                </div>
+
+            </div>
+
+           
+        }
+    </div>
+</div>
+

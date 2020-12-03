@@ -1,0 +1,17 @@
+﻿@model Hoyna.Models.Department
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "Department", FormMethod.Post))
+{
+    <div id="customers">
+        Department Name: @Html.TextBoxFor(model => model.DName)
+        Discription : @Html.TextBoxFor(model => model.Discription)
+        @Html.HiddenFor(model => model.DepartmentId)
+        <input type="submit" value="ADD" name="submit" />
+    </div>
+}

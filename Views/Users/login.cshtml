@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+@{
+    <link rel="stylesheet" href="~/Context/css/login.css">
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>login</title>
+</head>
+<body>
+    <div class="form-style-8">
+        <h2>Login  </h2>
+        @using (Html.BeginForm("login", "Users", FormMethod.Post))
+        {
+            <input type="email" name="Email" placeholder="Email" />
+            <input type="text" name="Password" placeholder="Password" />
+
+            <input type="submit" value="Login" />
+        }
+    <h1> @Html.ActionLink("Registation Here", "Registation", "Users", new { }) </h1>
+    </div>
+</body>
+</html>

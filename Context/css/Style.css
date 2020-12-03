@@ -1,0 +1,339 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Sen:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sen:800&display=swap');
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+*, html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #e9e9e9;
+}
+
+._Wrapper_Class {
+    width: 1350px;
+    height: 100%;
+    margin: auto;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+}
+
+._Left_Section {
+    width: 300px;
+    background-color: #ffffff;
+}
+
+._logoSection {
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid rgb(212, 204, 246);
+}
+
+._navSection ul li {
+    list-style: none;
+    position: relative;
+}
+
+._navSection ul ul a {
+    font-size: 16px;
+    background-image: linear-gradient(to top, #053728, #1b4336, #2d4f44, #3f5b53, #516761);
+    color: white;
+    padding:14px 40px;
+}
+
+._navSection ul ul {
+    transition: all 0.3s;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10000;
+}
+
+._navSection ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+._navSection a {
+    position: relative;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 13px 50px;
+    font-family: 'Sen', sans-serif;
+    font-size: 18px;
+    color: #6ca7a2;
+    font-weight: 700;
+}
+
+.material-icons {
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    color: #7e78fe;
+}
+
+._navSection a::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 8px;
+    background-color: #7e78fe;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    display: none;
+    border-radius: 0px 200px 200px 0px;
+    -moz-border-radius: 0px 200px 200px 0px;
+    -webkit-border-radius: 0px 200px 200px 0px;
+}
+
+._navSection a::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 8px;
+    background-color: #7e78fe;
+    z-index: 3;
+    right: 0;
+    top: 0;
+    display: none;
+    border-radius: 200px 0px 0px 200px;
+    -moz-border-radius: 200px 0px 0px 200px;
+    -webkit-border-radius: 200px 0px 0px 200px;
+}
+
+._navSection a:hover {
+    background-color: rgb(212, 204, 246);
+    color: #7e78fe;
+}
+
+a:hover::after {
+    display: block;
+}
+
+a:hover::before {
+    display: block;
+}
+
+/*background-color: rgb(212, 204, 246);*/
+
+/*Right Section #7e78fe*/
+._Right_Section {
+    width: 1050px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+._Top_Widgets {
+    margin-top: 20px;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+._Widgets_Items{
+    width: 250px;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(27, 100, 109,1) 0%, rgba(8,54,75,1) 89%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.icon {
+    height: 90%;
+    width: 90%;
+    background:gay;
+}
+
+._appointMent_widget {
+    margin: 20px auto;
+    width: 98.8%;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.appointment_header {
+    height: 60px;
+    border-bottom: 1px solid rgb(212, 204, 246);
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.title_row {
+    flex: 1;
+}
+
+    .title_row a {
+        display: block;
+        text-transform: capitalize;
+        text-decoration: none;
+        padding: 10px 10px;
+        font-family: 'Sen', sans-serif;
+        font-size: 18px;
+        color: #6ca7a2;
+        font-weight: 700;
+    }
+
+.link_row {
+    flex: 3;
+}
+
+.DataContent {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Sen', sans-serif;
+}
+
+td {
+    font-size: 16px;
+    font-weight:300;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+.Col_DataList {
+    margin: 20px auto;
+    width: 98.8%;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+
+    -ms-flex-wrap: wrap;
+    overflow: hidden
+}
+
+.DoctorList {
+    flex: 2;
+    background-color: azure;
+}
+
+.contentList {
+    flex: 2;
+}
+
+.New_Patients {
+    margin: 20px auto;
+    width: 98.8%;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: #7e78fe;
+}
+
+
+
+/*TAble style*/
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 30px auto;
+}
+
+    #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        
+    }
+
+    #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+
+    }
+
+    #customers tr:hover {
+        background-color: #ddd;
+    }
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #4CAF50;
+        color: white;
+
+    }
+
+
+
+
+input[type=text] {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 8px 0;
+
+    background: none;
+
+}
+
+input[type=submit] {
+    padding: 10px 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: aliceblue;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 4px 6px rgba(0,0,0,0.2);
+    background: -webkit-linear-gradient(left, rgba(27, 100, 109,1) 0%, rgba(8,54,75,1) 89%);
+    border: none;
+    cursor: pointer;
+}
+
+
+
+

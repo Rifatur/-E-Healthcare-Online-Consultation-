@@ -1,0 +1,101 @@
+﻿.table_tow {
+    width: 80%;
+    margin: 10px auto;
+    -ms-display: flex;
+    font-family: 'Rubik', sans-serif;
+}
+
+.input_col {
+    margin-top: 20px;
+    -ms-display: flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row1 {
+    width: 48%;
+}
+
+.row2 {
+    width: 48%;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.alart {
+    color: crimson;
+}
+
+.genderbox {
+    display: flex;
+}
+
+    .genderbox > label {
+        padding: 0px 20px;
+    }
+
+input[type=text] {
+    width: 100%;
+    padding: 5px 0px 10px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+}
+input[type=text] {
+    width: 100%;
+    padding: 5px 0px 10px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+}
+select {
+    width: 240px;
+}
+
+input[type=date] {
+    width: 100%;
+    padding: 4px 0px 4px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.address-row {
+    width: 98%;
+    margin: 20px auto;
+}
+
+.input-col-2 {
+    width: 98%;
+    margin: 20px auto;
+    -ms-display: flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-row1 {
+    width: 23.5%;
+}
+
+.input-col-3 {
+    width: 98%;
+    margin: 20px auto;
+}
+
+textarea {
+    width: 100%;
+    padding: 4px 0px 4px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+}

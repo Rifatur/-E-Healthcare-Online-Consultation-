@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Hoyna.Models.AppointmentModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+
+@if (Model != null)
+{
+    <table id="customers">
+        <tr>
+            <th>ID</th>
+            <th>Patient Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AId</td>
+                <td>@item.FName @item.LName</td>
+                <td>@item.Email </td>
+                <td>
+                    @Html.ActionLink("View", "Details", "Appointment", new { AId = @item.AId }, new { })
+                    @Html.ActionLink("Edit", "Edit", "Appointment", new { AId = @item.AId }, new { })
+                    @Html.ActionLink("Delete", "Delete", "Appointment", new { AId = @item.AId }, new { })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <div class="link">
+        <a href="~/Appointment/ADD">Add Appointment ></a>
+    </div>
+}
+

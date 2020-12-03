@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Hoyna.Models.DoctorModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+@if (Model != null)
+{
+    <table id="customers">
+        <tr>
+            <th>ID</th>
+            <th>Doctor Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@item.DocId</td>
+        <td>@item.FName @item.LName</td>
+        <td>@item.Email </td>
+        <td>
+            @Html.ActionLink("View", "Details", "Doctor", new { DocId = @item.DocId }, new { })
+            @Html.ActionLink("Edit", "Edit", "Doctor", new { DocId = @item.DocId }, new { })
+            @Html.ActionLink("Delete", "Delete", "Doctor", new { DocId = @item.DocId }, new { })
+        </td>
+    </tr>
+        }
+
+    </table>
+
+    <div class="link">
+        <a href="~/Doctor/ADD">Add Doctor ></a>
+    </div>
+}

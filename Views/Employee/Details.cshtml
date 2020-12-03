@@ -1,0 +1,63 @@
+﻿@model Hoyna.Models.Employee
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+    <table id="customers">
+        <tr>
+            <td> Id</td>
+            <td>@Model.EmpId</td>
+        </tr>
+        <tr>
+            <td>Employee Name</td>
+            <td>@Model.EmpFName @Model.EmpLName</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>@Model.Passward</td>
+        </tr>
+        <tr>
+        <tr>
+            <td>Date Of Birth</td>
+            <td>@Model.DOB</td>
+        </tr>
+        <tr>
+        <tr>
+            <td>Address </td>
+            <td>@Model.EmpAddress</td>
+        </tr>
+        <tr>
+            <td>Gander</td>
+            <td>@Model.Gander</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>@Model.City</td>
+        </tr>
+        <tr>
+            <td>State</td>
+            <td>@Model.State</td>
+        </tr>
+        <tr>
+            <td>PhoneNo</td>
+            <td>@Model.PhoneNo</td>
+        </tr>
+        <tr>
+            <td>Employe Type</td>
+            <td>@Model.EmployeeType.eTypeName</td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.ActionLink("Back", "Index", "Employee",new { });
+            </td>
+        </tr>
+
+    </table>
+

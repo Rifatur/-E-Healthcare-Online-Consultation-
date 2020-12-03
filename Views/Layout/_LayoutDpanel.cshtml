@@ -1,0 +1,95 @@
+﻿@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+    </head>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+    </html>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/Context/doctor.css">
+</head>
+<body>
+    <div class="WrapperUserPanel">
+
+        <!-- _LeftSection -->
+        <section class="_LeftSection">
+            <div class="_LeftHeader">
+                <h2><strong>vms</strong>System</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="~/DPanel/Index">Dashboard</a></li>
+                    <li>@Html.ActionLink("Appointment", "Appointment", "DPanel", new { DocId = @Session["DocId"].ToString() }, new { })</li>
+                    <li>@Html.ActionLink("Massage", "Massage", "DPanel", new { DocId = @Session["DocId"].ToString() }, new { })</li>
+                    <li>@Html.ActionLink("Report", "Report", "DPanel", new { DocId = @Session["DocId"].ToString() }, new { })</li>
+                    <li>@Html.ActionLink("Profile", "profile", "DPanel", new { DocId = @Session["DocId"].ToString() }, new { })</li>
+                    <li>
+                        @*<a href="~/DPanel/Education">Education</a>*@
+                        @Html.ActionLink("Education", "Education", "DPanel", new { DocId = @Session["DocId"].ToString() }, new { })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Specialization", "Specialization", "DPanel", new { DocId = @Session["DocId"].ToString() }, new { })
+                    </li>
+                    <li><a href="">LogOut</a></li>
+                </ul>
+            </nav>
+        </section>
+
+
+        <!-- _RightSection -->
+        <section class="_RightSection">
+            <main>
+                <div class="MainContainer">
+                    <header>
+                        <div class="notify">
+                            <li><span class="material-icons"> notification_important</span></li>
+                            <li><span class="material-icons"> email</span></li>
+                            <li>
+                                @if (Session["DocId"] != null)
+                                {
+                                    <p><strong> @Session["FName"].ToString() @Session["LName"].ToString()</strong></p>
+                                }
+
+                            </li>
+                        </div>
+                        <div class="Userimage" id="dpimage">
+                            <img src="https://i.picsum.photos/id/1005/100/100.jpg" alt="">
+                        </div>
+                        <div class="email">
+                            @if (Session["DocId"] != null)
+                            {
+                                @Session["Email"].ToString() 
+                            }
+                        </div>
+
+                    </header>
+                    <!-- Display Container -->
+                    <div class="DisplayContainer">
+                        <!-- Promotion -->
+                        <!--   _widgetRow-->
+
+                        @RenderBody()
+
+                    </div>
+                    <!--  -->
+                </div>
+            </main>
+        </section>
+    </div>
+
+</body>
+</html>

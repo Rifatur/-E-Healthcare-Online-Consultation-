@@ -1,0 +1,396 @@
+﻿/* Text Import Links */
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+/*  */
+*, html {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.WrapperUserPanel {
+    width: 1200px;
+    margin: auto;
+    border-radius: 0px 0px 40px 40px;
+    -moz-border-radius: 0px 0px 40px 40px;
+    -webkit-border-radius: 0px 0px 40px 40px;
+    background-color: #262634;
+    display: flex;
+    overflow: hidden;
+}
+/* Left Stde Section Style  */
+/*  */
+
+._LeftSection {
+    flex: .8;
+}
+/* _LeftHeader */
+._LeftHeader {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #445566;
+    text-shadow: 1px 1px 2px rgb(15, 15, 12);
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+    ._LeftHeader strong {
+        letter-spacing: 2px;
+        color: rgb(131, 112, 4);
+        font-family: 'Monoton', cursive;
+    }
+/*nav */
+nav {
+    width: 100%;
+}
+
+    nav ul li {
+        list-style: none;
+        position: relative;
+    }
+    /* nav a */
+    nav a {
+        text-decoration: none;
+        display: block;
+        text-shadow: 0 0 1px black;
+        color: #8f979e;
+        font-weight: 800;
+        font-size: 18px;
+        padding: 12px 20px;
+        font-family: 'ZCOOL XiaoWei', serif;
+        -webkit-transition: all 0.2s 0s ease-in-out;
+        -moz-transition: all 0.2s 0s ease-in-out;
+        -o-transition: all 0.2s 0s ease-in-out;
+        transition: all 0.2s 0s ease-in-out;
+        /* font-family: 'Federo', sans-serif; */
+    }
+        /* nav a:hover{
+    background-color: blue;
+    color: #000;
+} */
+
+        nav a:hover {
+            background-color: whitesmoke;
+            border-radius: 0px 200px 200px 0px;
+            -moz-border-radius: 0px 200px 200px 0px;
+            -webkit-border-radius: 0px 200px 200px 0px;
+            -webkit-box-shadow: inset 0px 2px 44px -19px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 0px 2px 44px -19px rgba(0,0,0,0.75);
+            box-shadow: inset 0px 2px 44px -19px rgba(0,0,0,0.75);
+            color: #262634;
+        }
+
+
+
+/*  */
+
+/* RIFAT */
+/* Right Section container Style  */
+._RightSection {
+    flex: 3.2;
+    /* background-color: whitesmoke; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 96%;
+    width: 97%;
+    background-color: whitesmoke;
+    border-radius: 40px 40px 40px 40px;
+    -moz-border-radius: 40px 40px 40px 40px;
+    -webkit-border-radius: 40px 40px 40px 40px;
+    /* -webkit-box-shadow: inset 0px 2px 44px -19px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 2px 44px -19px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 2px 44px -19px rgba(0,0,0,0.75); */
+}
+
+.MainContainer {
+    width: 96%;
+    margin: auto;
+}
+
+/* header */
+header {
+    height: 50px;
+    width: 100%;
+    border-bottom: 2px solid silver;
+    position: relative;
+}
+
+.notify {
+    position: absolute;
+    height: 100%;
+}
+
+    .notify li {
+        padding: 5px 2px;
+        display: inline-block;
+    }
+
+.material-icons {
+    margin-top: 6px;
+    color: grey;
+    font-size: 30px;
+}
+
+.email {
+    position: absolute;
+    font-size: 15px;
+    font-family: 'Federo', sans-serif;
+    top: 18px;
+    right: 0;
+}
+
+.Userimage {
+    height: 45px;
+    width: 45px;
+    float: right;
+    right: 160px;
+    border-radius: 50%;
+    background-color: #008080;
+    top: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .Userimage img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+    }
+
+
+/* DisplayContainer */
+
+.DisplayContainer {
+    width: 100%;
+    height: 100%;
+}
+/* Promotion */
+.Promotion {
+    height: 150px;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+/* promoCard */
+.promoCard {
+    width: 49%;
+    height: 100%;
+    /* background-color: lavender; */
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.2s 0s ease-in-out;
+    -moz-transition: all 0.2s 0s ease-in-out;
+    -o-transition: all 0.2s 0s ease-in-out;
+    transition: all 0.2s 0s ease-in-out;
+    -webkit-box-shadow: 0px 2px 44px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 44px -14px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 44px -14px rgba(0,0,0,0.75);
+    /* box-shadow: 0 0 5px rgb(172, 205, 214); */
+}
+
+    .promoCard > img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .promoCard > h2 {
+        position: absolute;
+        font-family: 'Federo', sans-serif;
+        left: 20px;
+        top: 20px;
+        text-shadow: 0 0 10px #fff;
+    }
+
+    .promoCard > .Offer {
+        position: absolute;
+        border-radius: 50%;
+        font-size: 60px;
+        font-family: 'Federo', sans-serif;
+        color: lightsalmon;
+        bottom: 5px;
+        left: 20px;
+        text-shadow: 0 0 10px #fff;
+    }
+
+    .promoCard > h3 {
+        position: absolute;
+        color: maroon;
+        font-family: 'Federo', sans-serif;
+        font-size: 20px;
+        bottom: 20px;
+        left: 150px;
+        text-shadow: 0 0 10px #fff;
+    }
+
+.booking {
+    position: absolute;
+    bottom: 30px;
+    left: 60%;
+}
+
+    .booking a {
+        padding: 8px 20px;
+        border: 2px solid rgb(15, 122, 155);
+        border-radius: 10px;
+        color: steelblue;
+        text-shadow: 0 0 10px rgb(15, 122, 155);
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Federo', sans-serif;
+    }
+
+.promoCard:hover {
+    transform: scale(1.04);
+}
+
+.promoCard2 {
+    width: 49%;
+    height: 100%;
+    /* background-color: lavender; */
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.2s 0s ease-in-out;
+    -moz-transition: all 0.2s 0s ease-in-out;
+    -o-transition: all 0.2s 0s ease-in-out;
+    transition: all 0.2s 0s ease-in-out;
+    -webkit-box-shadow: 0px 2px 44px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 44px -14px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 44px -14px rgba(0,0,0,0.75);
+    /* box-shadow: 0 0 5px rgb(172, 205, 214); */
+}
+
+    .promoCard2 > img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .promoCard2 > h2 {
+        position: absolute;
+        font-family: 'Federo', sans-serif;
+        right: 20px;
+        top: 20px;
+        text-shadow: 0 0 10px #fff;
+    }
+
+    .promoCard2 > .Offer2 {
+        position: absolute;
+        border-radius: 50%;
+        font-size: 60px;
+        font-family: 'Federo', sans-serif;
+        color: lightsalmon;
+        bottom: 5px;
+        right: 20px;
+        text-shadow: 0 0 10px #fff;
+    }
+
+    .promoCard2 > h3 {
+        position: absolute;
+        color: maroon;
+        font-family: 'Federo', sans-serif;
+        font-size: 20px;
+        bottom: 20px;
+        right: 150px;
+        text-shadow: 0 0 10px #fff;
+    }
+
+.booking2 {
+    position: absolute;
+    bottom: 30px;
+    left: 12%;
+}
+
+    .booking2 a {
+        padding: 8px 20px;
+        border: 2px solid rgb(64, 15, 155);
+        border-radius: 10px;
+        color: rgb(64, 15, 155);
+        text-shadow: 0 0 10px rgb(15, 122, 155);
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Federo', sans-serif;
+    }
+
+.promoCard2:hover {
+    transform: scale(1.04);
+}
+
+
+
+
+.container {
+    width: 100%;
+    margin-top: 20px;
+    font-family: 'Federo', sans-serif;
+    border-radius: 20px 20px 0px 0px;
+    -moz-border-radius: 20px 20px 0px 0px;
+    -webkit-border-radius: 20px 20px 0px 0px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+    .container h2 {
+        padding: 5px 20px;
+        background-color: #262634;
+        color: steelblue;
+    }
+
+
+
+.responsive-table li {
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    text-align: center;
+    color: steelblue;
+}
+
+.responsive-table .table-header {
+    background-color: #262634;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.responsive-table .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-table .col-1 {
+    flex-basis: 10%;
+}
+
+.responsive-table .col-2 {
+    flex-basis: 40%;
+}
+
+.responsive-table .col-3 {
+    flex-basis: 25%;
+}
+
+.responsive-table .col-4 {
+    flex-basis: 25%;
+}

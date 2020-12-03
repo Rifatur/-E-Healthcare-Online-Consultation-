@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Registation";
+    Layout = "~/Views/Layout/_LayoutHome.cshtml";
+}
+@{
+    <link rel="stylesheet" href="~/Context/doctor.css">
+}
+
+<div class="card-form">
+    <div class="signup">
+        @using (Html.BeginForm("Registation", "Users", FormMethod.Post))
+        {
+
+            <div class="form-title">Add You Education</div>
+            <div class="form-body">
+                <div class="row">
+                    <input type="text" placeholder="User Name*" name="UserName">
+
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Email*" name="Email">
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Password*" name="Password">
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit" />
+                </div>
+            </div>
+
+            
+        }
+    </div>
+</div>
+

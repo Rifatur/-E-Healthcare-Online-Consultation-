@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Hoyna.Models.Specialization>
+@{
+    ViewBag.Title = "Specialization";
+    Layout = "~/Views/Layout/_LayoutDpanel.cshtml";
+}
+
+@*<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.SpecName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocId)
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.DocId)
+            </td>
+            <td>
+                @Html.ActionLink("View", "Details", "DPanel", new { EId = @item.EId }, new { })
+                @Html.ActionLink("Edit", "Edit", "DPanel", new { EId = @item.EId }, new { })
+                @Html.ActionLink("Delete", "Delete", "DPanel", new { EId = @item.EId }, new { })
+            </td>
+
+        </tr>
+    }
+
+</table>*@
+
+
+
+
+
+
+
+<div class="card-form">
+    <div class="signup">
+        @using (Html.BeginForm("Specialization", "DPanel", FormMethod.Post))
+        {
+            <div class="form-title">Add Your Specialization</div>
+            <div class="form-body">
+                <div class="row">
+                    <input type="text" placeholder="Specialization *" name="SpecName">
+                </div>
+                <div class="row">
+                    <input type="text" name="DocId" value="@Session["DocId"].ToString()">
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit" />
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+

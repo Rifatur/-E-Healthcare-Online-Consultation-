@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Hoyna.Models.Education>
+@{
+    ViewBag.Title = "Education";
+    Layout = "~/Views/Layout/_LayoutDpanel.cshtml";
+}
+@{ 
+
+}
+
+
+<div class="navicationBar">
+    <div class="Addbtn"><a href="~/DPanel/AddDegree">Add Edication</a></div>
+</div>
+
+<div class="DisplayEduList">
+
+    @*<div class="_BookingList ">
+        <div class="_ListHeader">
+            <h3>Education List</h3>
+        </div>
+        <table class="bookingItems">
+            <tr>
+                <th>ID</th>
+                <th>Room Title</th>
+                <th>Room Price</th>
+                <th>Room Type</th>
+                <th>Action</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.RoomId</td>
+                    <td>@item.RoomTitle</td>
+                    <td>@item.RoomPrice</td>
+                    <td>@item.typeName</td>
+                    <td>
+                        @Html.ActionLink("View", "Details", "Room", new { RoomId = @item.RoomId }, new { })
+                        @Html.ActionLink("Edit", "Edit", "Room", new { RoomId = @item.RoomId }, new { })
+                        @Html.ActionLink("Delete", "Delete", "Room", new { RoomId = @item.RoomId }, new { })
+                    </td>
+                </tr>
+            }
+        </table>*@
+    <table class="table">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DegreeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.University)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.DegreeName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.University)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.ActionLink("View", "EDetails", "DPanel", new { EId = @item.EId }, new { })
+            @Html.ActionLink("Edit", "EEdit", "DPanel", new { EId = @item.EId }, new { })
+            @Html.ActionLink("Delete", "Delete", "DPanel", new { EId = @item.EId }, new { })
+        </td>
+
+    </tr>
+        }
+
+    </table>
+
+</div>
+
+
+

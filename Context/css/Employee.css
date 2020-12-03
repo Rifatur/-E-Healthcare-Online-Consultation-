@@ -1,0 +1,212 @@
+﻿.EmployeeDisplay {
+    width: 90%;
+    height: 90%;
+    background-color: #dde1e7;
+    box-shadow: -3px -3px 7px #ffffff73,3px 3px 5px rgba(94,104,121,.288);
+}
+
+
+.navicationBar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    margin-left:10px;
+    margin-top: 20px;
+    padding-bottom:20px;
+}
+
+.Addbtn {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+    -webkit-transition: all 0.5s 0s ease-in-out;
+    -moz-transition: all 0.5s 0s ease-in-out;
+    -o-transition: all 0.5s 0s ease-in-out;
+    transition: all 0.5s 0s ease-in-out;
+    background-color: #dde1e7;
+    box-shadow: -3px -3px 7px #ffffff73,3px 3px 5px rgba(94,104,121,.288);
+}
+
+    .Addbtn a {
+        display: block;
+        color: #445566;
+        text-transform: uppercase;
+        padding: 15px 40px;
+        letter-spacing: 2px;
+        font-family: 'Federo', sans-serif;
+        font-weight: 800;
+        text-decoration:none;
+        -webkit-transition: all 0.3s 0s ease-in-out;
+        -moz-transition: all 0.3s 0s ease-in-out;
+        -o-transition: all 0.3s 0s ease-in-out;
+        transition: all 0.3s 0s ease-in-out;
+        text-shadow:0px 0px 1px rgb(15, 15, 12);
+    }
+
+    .Addbtn:hover {
+        background-color: rgba(1224,104,121,.288);
+        box-shadow: inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(1224,104,121,.288);
+    }
+
+    .Addbtn a:hover {
+        color: #055864;
+        letter-spacing: 1.2px;
+        text-shadow: 1px 1px 2px rgb(15, 15, 12);
+    }
+
+
+
+/*Card form Style*/
+.card-form {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #dde1e7;
+    box-shadow: -3px -3px 7px #ffffff73,3px 3px 5px rgba(94,104,121,.288);
+}
+
+    .card-form .form-title {
+        width: 100%;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        height: 80px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #445566;
+        font-family: 'Federo', sans-serif;
+        text-shadow: inset 1px 1px 2px rgb(15, 15, 12);
+        text-transform: uppercase;
+        background-color: #dde1e7;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-form .form-body {
+        padding: 10px;
+    }
+
+        .card-form .form-body .row {
+            display: -webkit-box;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+            .card-form .form-body .row input[type="text"] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 100%;
+                margin: 0 15px;
+                height: 35px;
+                padding: 5px 15px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                background-color: #dde1e7;
+                box-shadow: inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,.288);
+                color: #576366;
+                font-size: 14px;
+            }
+
+            .card-form .form-body .row input[type="date"] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 100%;
+                margin: 0 15px;
+                height: 35px;
+                padding: 5px 15px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                background-color: #dde1e7;
+                box-shadow: inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,.288);
+                color: #576366;
+                font-size: 14px;
+            }
+
+
+
+    .card-form .rule {
+        height: 2px;
+        background: #e8ebed;
+        margin: 0px 35px;
+    }
+
+    .card-form .form-body .row input[type="submit"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 100%;
+        margin: 0 15px;
+        height: 35px;
+        padding: 5px 15px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        background-color: #dde1e7;
+        box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,.288);
+        color: #576366;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .card-form .form-body .row input[type="submit"]:hover {
+            box-shadow: inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,.288);
+        }
+
+
+.bookingItems {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    overflow: hidden;
+}
+
+th, td {
+    letter-spacing: 2px;
+    font-family: 'Federo', sans-serif;
+    text-align: left;
+    font-size: 16px;
+    padding: 12.2px;
+}
+
+th {
+    background-color: #dde1e7;
+    color: #055864;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/*TAble style*/
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 30px auto;
+}
+
+    #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+        background-color: #ddd;
+    }
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #4CAF50;
+        color: white;
+    }

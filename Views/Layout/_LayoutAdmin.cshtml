@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="~/Context/css/Style.css">
+    <link rel="stylesheet" href="~/Context/css/addDoctor.css">
+    <link rel="stylesheet" href="~/Context/doctor.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+</head>
+<body>
+    <div class="WrapperUserPanel">
+
+        <!-- _LeftSection -->
+        <section class="_LeftSection">
+            <div class="_LeftHeader">
+                <h2><strong>vms</strong>System</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="~/Admin/Index">Dashboard</a></li>
+                    <li><a href="~/Doctor">Doctors</a></li>
+                    <li><a href="~/Patient">Patients</a></li>
+                    <li><a href="~/Appointment">Appointment</a></li>
+                    <li><a href="~/Employee">Employees</a></li>
+                    <li><a href="~/Department">Departments</a></li>
+                    <li><a href="">Blogs</a></li>
+
+                    <li>@Html.ActionLink("LogOut", "LogOut", "Admin", new { })</li>
+                </ul>
+            </nav>
+        </section>
+
+
+        <!-- _RightSection -->
+        <section class="_RightSection">
+            <main>
+                <div class="MainContainer">
+                    <header>
+                        <div class="notify">
+                            <li><span class="material-icons"> notification_important</span></li>
+                            <li><span class="material-icons"> email</span></li>
+                            <li>
+                                @if (Session["adminID"] != null)
+                                    {
+                                        <p><strong> @Session["Name"].ToString() </strong></p>
+                                    }
+
+                            </li>
+                        </div>
+                        <div class="Userimage" id="dpimage">
+                            <img src="https://i.picsum.photos/id/1005/100/100.jpg" alt="">
+                        </div>
+                        <div class="email">
+                           @if (Session["adminID"] != null)
+                                {
+                                    @Session["Email"].ToString()
+                                }
+                        </div>
+
+                    </header>
+                    <!-- Display Container -->
+                    <div class="DisplayContainer">
+                        <!-- Promotion -->
+                        <!--   _widgetRow-->
+
+                        @RenderBody()
+
+                    </div>
+                    <!--  -->
+                </div>
+            </main>
+        </section>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+
+@*
+
+        <div class="_Wrapper_Class">
+
+            <main>
+                <div class="_Left_Section SectionL">
+                    <div class="_logoSection"></div><!--logosection-->
+
+                    <div class="_navSection">
+                        <ul>
+                            <li><a href="~/Admin"><i class="material-icons">dashboard</i> Dashboard</a></li>
+                            <li class="item">
+                                <a href="~/Appointment" class="btn"><i class="material-icons">event</i>Appointment</a>
+                                <ul>
+                                    <li><a href=""> Book Appointment </a></li>
+                                    <li><a href="">Appointment List</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="item">
+                                <a href=""><i class="material-icons">pregnant_woman</i>Patients</a>
+                                <ul>
+                                    <li><a href=""> Add Patients </a></li>
+                                    <li><a href="">Patients List</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <a href="~/Doctor"><i class="material-icons">supervisor_account</i>Doctors</a>
+                                <ul>
+                                    <li><a href="~/Doctor"> Add Doctors </a></li>
+                                    <li><a href="">Doctors List</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <a href="~/Employee"><i class="material-icons">store</i>Employees</a>
+                                <ul>
+                                    <li><a href=""> Add Employees </a></li>
+                                    <li><a href="">Employees List</a></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <a href="~/Department"> <i class="material-icons"> assignment_ind</i>Departments</a>
+                            </li>
+                            <li class="item">
+                                <a href=""><i class="material-icons">menu_book</i>Blogs</a>
+                                <ul>
+                                    <li><a href=""> Add Blogs </a></li>
+                                    <li><a href="">Blogs List</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--Navigationsection-->
+                </div>
+
+                <div class="_Right_Section SectionR">
+                    <header>
+                    </header><!--Header-->
+                    @RenderBody()
+
+                </div><!--_Right_Section-->
+            </main><!--Main-->
+
+            <footer></footer><!--footer-->
+
+        </div><!---Main Wrapper Class-->
+
+    </body>
+    </html>
+*@

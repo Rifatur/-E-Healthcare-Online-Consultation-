@@ -1,0 +1,58 @@
+﻿@model Hoyna.Models.EmployeeModel
+@{
+    ViewBag.Title = "Upload";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+@{
+    <link rel="stylesheet" href="~/Context/css/Employee.css">
+}
+<div class="card-form">
+    <div class="signup">
+        @using (Html.BeginForm("Upload", "Employee", FormMethod.Post))
+        {
+
+            <div class="form-title">Add Employee </div>
+            <div class="form-body">
+                <div class="row">
+                    <input type="text" placeholder="First Name*" name="EmpFName">
+                    <input type="text" placeholder="Last Name*" name="EmpLName">
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Email*" name="Email">
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Password*" name="Passward">
+                </div>
+                <div class="row">
+                    <input type="date" placeholder="DOB*" name="DOB">
+                    <select name="Gander">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Address*" name="EmpAddress">
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="City*" name="City">
+                    <input type="text" placeholder="State*" name="State">
+                    <input type="text" placeholder="Post Code*" name="Post">
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Phone No*" name="PhoneNo">
+                    @Html.DropDownListFor(model => model.eTypeId, ViewBag.eTypeList as SelectList, "--Select Employee Type--", new { })
+                </div>
+
+                <div class="row">
+                    <input type="submit" value="Submit" />
+                </div>
+
+            </div>
+
+        }
+    </div>
+    <div class="navicationBar">
+        <div class="Addbtn"><a href="~/Employee">Back</a></div>
+    </div>
+</div>

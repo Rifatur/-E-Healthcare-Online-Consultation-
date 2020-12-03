@@ -1,0 +1,21 @@
+﻿@model Hoyna.Models.DepartmentModel
+@{
+    ViewBag.Title = "ADD";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+<h2>ADD</h2>
+
+
+
+@using (Html.BeginForm("ADD", "Department", FormMethod.Post))
+{
+    <div id="customers">
+    @Html.TextBoxFor(model => model.DName, new { @placeholder = "Name" })
+    @Html.TextBoxFor(model => model.Discription, new { @placeholder = "Discription " })
+    <input type="submit" value="submit" />
+    </div>
+}
+<div class="link">
+    <a href="~/Department">< BAck to Department List</a>
+</div>

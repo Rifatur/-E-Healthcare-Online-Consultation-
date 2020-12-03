@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome ONMS</title>
+    <link rel="stylesheet" href="~/Context/style.css">
+    <link rel="stylesheet" href="~/Context/css/addDoctor.css">
+</head>
+<body>
+    <!--Main Header \RI\ && Navigation Section\FAT\-->
+    <header id="_ONMS_header" class="_Header_ONMS">
+        <div class="_Main_Header" id="_Header_Main">
+
+        </div>
+        <!---->
+        <div class="Navigation_Section">
+            <div class="_Nav_Container">
+                <!--/RI/Logo Section\FAT\-->
+                <div class="_col_logoSec">
+                </div>
+                <!--/RI//Navigation Section\\FAT\-->
+                <div class="_col_NavSec">
+                    <ul>
+                        <li><a href="~/Users">Login</a></li>
+                        <li><a href="~/Home/Doctor">DOCTORS</a></li>
+                        <li><a href="">DEPARTMENTS</a></li>
+                        <li><a href="~/Home/ADD">APPOINTMENT</a></li>
+                        <li><a href="~/Home">HOME</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/RI/ Navigation Section \FAT\-->
+    </header>
+    <!--// Header \\-->
+    <!--/RI//MAIN\\FAT\-->
+    <main class="_Main_Wrapper">
+
+        @RenderBody()
+
+    </main>
+    <!--/RI//\\FAT\-->
+    <footer>
+        <div class="container_footer">
+            <div class="_row">
+                <div class="_fo_col"></div>
+                <div class="_fo_col">
+                    <h4>ABOUT</h4>
+                    <ul class="links">
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Register</a></li>
+                    </ul>
+                </div>
+                <div class="_fo_col">
+                    <h4>USEFUL LINKS</h4>
+                    <ul class="links">
+                        <li><a href="">Doctor</a></li>
+                        <li><a href="">Clinics</a></li>
+                        <li><a href="">Specialization</a></li>
+                        <li><a href="">Join as a Doctor</a></li>
+                        <li><a href="">Dounload App</a></li>
+                    </ul>
+                </div>
+                <div class="_fo_col">
+                    <h4>CONTACT WITH US</h4>
+                    <ul class="links">
+                        <li><a href="">+880186-8428129</a></li>
+                        <li><a href="">help@onms.com</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

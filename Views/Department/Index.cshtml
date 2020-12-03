@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+@model IEnumerable<Hoyna.Models.DepartmentModel>
+
+<h2>Department LIST </h2>
+
+@if (Model != null)
+{
+    <table id="customers">
+        <tr>
+            <th>ID</th>
+            <th>Department Name</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DepartmentId</td>
+                <td>@item.DName</td>
+                <td>
+                    @Html.ActionLink("View", "Details", "Department", new { DepartmentId = @item.DepartmentId }, new { })
+                    @Html.ActionLink("Edit", "Edit", "Department", new { DepartmentId = @item.DepartmentId }, new { })
+                    @Html.ActionLink("Delete", "Delete", "Department", new { DepartmentId = @item.DepartmentId }, new { })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <div class="link">
+        <a href="~/Department/ADD">Add Department ></a>
+    </div>
+}
+
+

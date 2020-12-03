@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="~/Context/userStyle.css">
+</head>
+<body>
+    <div class="WrapperUserPanel">
+
+        <!-- _LeftSection -->
+        <section class="_LeftSection">
+            <div class="_LeftHeader">
+                <h2><strong>vms</strong>System</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">Dashboard</a></li>
+                    <li>@Html.ActionLink("Appointment", "Appointment", "Users", new { UserId = @Session["UserID"].ToString() }, new { })</li>
+                    <li><a href="">Massage</a></li>
+                    <li><a href="">Reports</a></li>
+                    <li><a href="~/Home/Index">Back To Home</a></li>
+                    <li><a href="">LogOut</a></li>
+                </ul>
+            </nav>
+            
+        </section>
+
+
+        <!-- _RightSection -->
+        <section class="_RightSection">
+            <main>
+                <div class="MainContainer">
+                    <header>
+                        <div class="notify">
+                            <li><span class="material-icons"> notification_important</span></li>
+                            <li><span class="material-icons"> email</span></li>
+                        </div>
+                        <div class="Userimage" id="dpimage">
+                            <img src="https://i.picsum.photos/id/1005/100/100.jpg" alt="">
+                        </div>
+                        <div class="email">
+                            @if (Session["UserID"] != null)
+                            {
+                                @Session["Email"].ToString()
+                            }
+                        </div>
+
+                    </header>
+                    <!-- Display Container -->
+                    <div class="DisplayContainer">
+                        <!-- Promotion -->
+
+                        @RenderBody()
+
+                    </div>
+                    <!--  -->
+                </div>
+            </main>
+        </section>
+    </div>
+
+</body>
+</html>

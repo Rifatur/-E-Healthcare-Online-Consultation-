@@ -1,0 +1,114 @@
+﻿@model Hoyna.Models.Doctortbl
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+
+<div class="Dept_details">
+
+
+    @using (Html.BeginForm("Edit", "Doctor", FormMethod.Post))
+    {
+    <div class="table_tow">
+        <div class="input_col">
+            <!--div input-->
+            <div class="row1">
+                <!--Rooww-->
+                <label for="Name">FirstName <span class="alart">*</span></label>
+                @Html.TextBoxFor(model => model.FName)
+            </div>
+            <div class="row2">
+                <label for="Name">LastName <span class="alart">*</span></label>
+                @Html.TextBoxFor(model => model.LName)
+            </div>
+        </div>
+        <div class="input_col">
+            <!--div input-->
+            <div class="row1">
+                <label for="Name">Email <span class="alart">*</span></label>
+                @Html.TextBoxFor(model => model.Email)
+            </div>
+            <div class="row2">
+                <label for="Name">Password <span class="alart">*</span></label>
+                @Html.TextBoxFor(model => model.Passward)
+            </div>
+        </div><!--End input col-->
+
+        <div class="input_col">
+            <!--div input-->
+            <div class="row1">
+                <!--Rooww-->
+                @Html.DropDownListFor(model => model.DepartmentId, ViewBag.DepartmentList as SelectList, "--Select--", new { })
+            </div>
+            <div class="row2">
+                <!--Rooww-->
+                <label for="Name">Date Of Birth <span class="alart">*</span></label>
+
+                @Html.TextBoxFor(model => model.DOB)
+            </div>
+        </div><!--End input col-->
+        <div class="input_col">
+            <!--div input-->
+            <div class="row1">
+                <label for="male">Gender <span class="alart">*</span></label>
+                <div class="genderbox">
+                    <input type="radio" id="male" name="Gander" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="Gander" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="Gander" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="row2">
+
+            </div>
+        </div><!--End input col-->
+
+        <div class="address-row">
+            <label for="address">Address<span class="alart">*</span></label>
+
+            @Html.TextBoxFor(model => model.DocAddress)
+        </div><!--Address section-->
+        <div class="input-col-2">
+            <div class="col-row1">
+                <label for="Country">Country<span class="alart">*</span></label>
+
+                @Html.TextBoxFor(model => model.Country)
+            </div>
+            <div class="col-row1">
+                <label for="City">City<span class="alart">*</span></label>
+                @Html.TextBoxFor(model => model.City)
+            </div>
+            <div class="col-row1">
+                <label for="thana">State<span class="alart">*</span></label>
+                @Html.TextBoxFor(model => model.State)
+            </div>
+            <div class="col-row1">
+                <label for="pocode">Postal Code<span class="alart">*</span></label>
+
+                @Html.TextBoxFor(model => model.Post)
+            </div>
+        </div><!--Input col-2 end-->
+
+        <div class="input_col">
+            <!--div input-->
+            <div class="row1">
+                <!--Row-->
+                <label for="Phone">Phone <span class="alart">*</span></label>
+                @Html.TextBoxFor(model => model.PhoneNo)
+            </div>
+            <div class="row2">
+
+            </div>
+        </div><!--End input col-->
+        @Html.HiddenFor(model => model.DocId)
+
+    </div><!--Table Row-->
+        <input type="submit" value="Submit" />
+
+    }<!--END FORM-->
+
+</div>
+

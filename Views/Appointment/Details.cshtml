@@ -1,0 +1,73 @@
+﻿@model Hoyna.Models.AppointmentModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Layout/_LayoutAdmin.cshtml";
+}
+
+<table id="customers">
+    <tr>
+        <td>Appointment Id</td>
+        <td>@Model.AId</td>
+    </tr>
+    <tr>
+        <td>Doctor Name</td>
+        <td>@Model.FName @Model.LName</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <td>Message</td>
+        <td>@Model.Message</td>
+    </tr>
+    <tr>
+        <td>Set Time</td>
+        <td>@Model.set_time</td>
+    </tr>
+    <tr>
+    <tr>
+        <td>Gander</td>
+        <td>@Model.Gender</td>
+    </tr>
+    <tr>
+    <tr>
+        <td>Age </td>
+        <td>@Model.Age</td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td>@Model.Address</td>
+    </tr>
+    <tr>
+        <td>City </td>
+        <td>@Model.City</td>
+    </tr>
+    <tr>
+        <td>State </td>
+        <td>@Model.State</td>
+    </tr>
+    <tr>
+        <td>AppointmentDate </td>
+        <td>@Model.APM_Date</td>
+    </tr>
+    <tr>
+        <td>Phone No </td>
+        <td>@Model.contactNo</td>
+    </tr>
+    <tr>
+        <td>Department Name </td>
+        <td>@Model.DName</td>
+    </tr>
+    <tr>
+        <td>Created Date</td>
+        <td>@Model.CreatedDate</td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Back", "index", "Appointment", new { });
+        </td>
+    </tr>
+
+</table>
+
